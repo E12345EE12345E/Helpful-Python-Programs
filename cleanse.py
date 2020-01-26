@@ -15,6 +15,9 @@ def copyToProgram(copyLocation):
     with open(copyLocation,"r") as file:
         return file.read()
 def cleanse(location,data):
-    with open(location,"w+") as file:
+    with open(location,"w") as file:
         file.write(data)
+    with open(location,"r") as file:
         return file.read()
+
+print(cleanse("test.txt","l;ksaLK;ASDLK;ALFJASL;FJASLKFAL"))
